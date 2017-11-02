@@ -1,5 +1,5 @@
 import  React, {Component} from 'react'
-import { Link } from 'react-router-dom'
+
 
 class LandingComponent extends Component {
   constructor(){
@@ -57,13 +57,13 @@ class LandingComponent extends Component {
             </div>
             <div className='col-md-6'>
               <div id='container-fluid'>
-              <img className="img-fluid img-thumbnail" src="https://i.imgur.com/Anvgc5p.jpg" alt="Card image cap"/>
+              <img className="img-fluid img-thumbnail" src="https://i.imgur.com/Anvgc5p.jpg" />
             </div>
             </div>
           <div className='row' id='landingg2'>
             <div className='col-md-6'>
               <div className="card" id='card-ex2' style={{width: 22 + 'rem'}}>
-                <img className="card-img-top" src="https://i.ytimg.com/vi/eGnRGGsgr4w/maxresdefault.jpg" alt="Card image cap"/>
+                <img className="card-img-top" src="https://i.ytimg.com/vi/eGnRGGsgr4w/maxresdefault.jpg" />
                   <div className="card-body">
                     <p className="card-text">Aaaaaarghhhhhhh morty{'!'} Dreaming again {'?'}</p>
                   </div>
@@ -97,15 +97,14 @@ class LandingComponent extends Component {
                   </a>
                 </div>
             </div>
-
-
           </div>
 
+
             <div className='row' id='landingg3'>
-              <div className='col-md-6'>
-                <div id='first-col' className='special-ting'>
-                <div>
-                  <div>
+                <div className='col-md-6'>
+                  <div id='first-col' className='special-ting'>
+                    <div>
+                      <div>
                     <svg id="i-options" viewBox="0 0 32 32" width="32" height="32" fill="none"
                       stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                       <path d="M28 6 L4 6 M28 16 L4 16 M28 26 L4 26 M24 3 L24 9 M8 13 L8 19 M20 23 L20 29" />
@@ -133,18 +132,18 @@ class LandingComponent extends Component {
 
               <div className='col-md-6'>
                 <div className="card" id='card-ex3' style={{width: 25 + 'rem'}}>
-                  <img className="card-img-top"  src="https://pre00.deviantart.net/0de8/th/pre/f/2015/191/b/5/rick_and_morty__wallpaper__by_ghotire-d90pvce.png" alt="Card image cap"/>
+                  <img className="card-img-top"  src="https://pre00.deviantart.net/0de8/th/pre/f/2015/191/b/5/rick_and_morty__wallpaper__by_ghotire-d90pvce.png" />
                     <div className="card-body">
                       <p className="card-text">Oh No Rick{'!'} Classes {'??'} Classes {'??'} Ohhh Goddd</p>
                     </div>
                   </div>
-              </div>
+                </div>
+                </div>
               </div>
             </div>
-          </div>
+)}
 
-
-)} else {
+else {
 
         let picture1;
         let picture2;
@@ -168,31 +167,25 @@ class LandingComponent extends Component {
           break;
 
           default:
-            null
-
-        }
-
-
+            null}
 
   return(
         <div id='specc'>
-
               <div className='row' id='seconding-row'>
-                <div className='col-md-6' id='seconded-row'>
-                  <div id='first-col'>
-                  <div className='container'>
-                    <div class="card" id='land-card' style={{ width: 20 + 'rem' }}>
-                      <img class="card-img-top" src={picture1} alt="Card image cap"/>
-                        <div class="card-body">
+                  <div className='col-md-6' id='seconded-row'>
+                    <div id='first-col'>
+                      <div className='container'>
+                        <div class="card" id='land-card' style={{ width: 20 + 'rem' }}>
+                          <img class="card-img-top" src={picture1} />
+                          <div class="card-body">
                           <h4 class="card-title"> View {this.props.selector}{this.state.selector === 'class' ? 'es' : 's'}</h4>
                           <p class="card-text"> comes {'with'} the awesome ability to {'do'} the following   </p>
                         </div>
-                        <ul class="list-group list-group-flush">
+                          <ul class="list-group list-group-flush">
                           <li class="list-group-item"> Edit {this.props.selector}{this.state.selector === 'class' ? 'es' : 's'} </li>
                           <li class="list-group-item"> Delete {this.props.selector}{this.state.selector === 'class' ? 'es' : 's'}</li>
                           <li class="list-group-item" id='last-card-body' onClick={() => this.viewContent()}><a> Click to proceed </a></li>
                         </ul>
-
                       </div>
                       </div>
                   </div>
@@ -201,7 +194,7 @@ class LandingComponent extends Component {
                   <div className='col-md-6' id='third-row'>
                     <div id='first-col'>
                     <div class="card" id='land-card' style={{width: 20 + 'rem'}}>
-                      <img class="card-img-top" src={picture2} alt="Card image cap"/>
+                      <img class="card-img-top" src={picture2} />
                         <div class="card-body">
                           <h4 class="card-title"> Create {'new'} {this.state.selector}</h4>
                           <p class="card-text">Add to our existing database {'of'}  {this.props.selector}{this.state.selector === 'class' ? 'es' : 's'}</p>
@@ -215,15 +208,9 @@ class LandingComponent extends Component {
                       </div>
                        </div>
                     </div>
-
-
-        </div>
-      </div>
+                  </div>
+              </div>
       )
-
-
-}
-}
-}
+}}}
 
 export default LandingComponent

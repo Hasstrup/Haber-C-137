@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import First from './components/first-main'
 import Main from './components/main'
 import { BrowserRouter } from 'react-router-dom'
 import NavBar from './components/nav-bar'

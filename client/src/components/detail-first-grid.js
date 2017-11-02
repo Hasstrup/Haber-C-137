@@ -15,7 +15,6 @@ class FirstItem extends Component {
 
 render() {
 
-        let displaycontent ;
         let subject_agecontent;
         let teacher_classcontent;
 

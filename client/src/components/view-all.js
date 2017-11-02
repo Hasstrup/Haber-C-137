@@ -1,9 +1,6 @@
 import ContentItem from './content-item'
 import React, { Component } from 'react';
 import axios from 'axios'
-var getclass = require('../api/class-api')
-var students = require('../api/students-api')
-var teachers = require('../api/teacher-api')
 
 
 
@@ -63,7 +60,6 @@ class ViewAll extends Component {
 
     return(
         <div>
-
           <div className='container' id='container-view' >
             <div id='tiny-box1'>
                 <h6 id='lad-text'> {this.state.contents.length} </h6>
@@ -71,20 +67,17 @@ class ViewAll extends Component {
             <div id='tiny-box2'>
                 <h6 id='lad-text'> {this.state.selector}{this.state.selector === 'class' ? 'es' : 's'} currently </h6>
             </div>
-            <div id='tiny-box3'>
+              <div id='tiny-box3'>
               <a href={`/new${this.state.selector}`}>  <svg id="i-tag" viewBox="0 0 32 32" width="19" height="19" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <circle cx="24" cy="8" r="2" />
-    <path d="M2 18 L18 2 30 2 30 14 14 30 Z" />
-</svg>  create {'new'} {this.state.selector} </a>
+                <circle cx="24" cy="8" r="2" />
+                <path d="M2 18 L18 2 30 2 30 14 14 30 Z" />
+              </svg>  create {'new'} {this.state.selector} </a>
+              </div>
             </div>
-
-          </div>
-
-          <div className='container-fluid'>
-          {this.state.selector === 'class' ? classgrid : studentgrid}
-        </div>
-      </div>
-      )}
-  }
+              <div className='container-fluid'>
+                  {this.state.selector === 'class' ? classgrid : studentgrid}
+                </div>
+              </div>
+      )}}
 
 export default ViewAll;

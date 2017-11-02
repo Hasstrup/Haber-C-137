@@ -1,11 +1,6 @@
 import React, {Component} from 'react'
-import { Router, withRouter , Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import axios from 'axios'
-import Select from 'react-select'
-
-var classes = require('../api/class-api')
-var students = require('../api/students-api')
-var teachers = require('../api/teacher-api')
 
 class EditOrNewForm extends Component {
   constructor(props) {
@@ -217,7 +212,7 @@ case 'no':
           this.props.history.push(`/view${this.state.selector}`)})
           .catch(err => {
             this.setState({ errormessage: 'something went wrong, please try that again & fill up every input box'})
-            
+
           })
 
   break;
@@ -465,10 +460,6 @@ render() {
           if (this.state.redirect === 'true'){
             return(
             <Redirect to={`/view${this.state.selector}`} /> )
-          }
-
-        }
-
-        }
+          }}}
 
 export default EditOrNewForm;

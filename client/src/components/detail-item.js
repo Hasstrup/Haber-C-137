@@ -1,10 +1,6 @@
 import SpecificItem from './specific-item'
 import React, { Component } from 'react'
-import { withRouter } from 'react-router'
 import axios from 'axios'
-var getclass = require('../api/class-api')
-var students = require('../api/students-api')
-var teachers = require('../api/teacher-api')
 
 
 class DetailItem extends Component {
