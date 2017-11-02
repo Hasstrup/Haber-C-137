@@ -6,7 +6,6 @@ var port = process.env.PORT || 4000
 var cors = require('cors')
 app.use(cors());
 var bodyParser = require('body-parser')
-var LoadDB = require('./load.js')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}));
 
