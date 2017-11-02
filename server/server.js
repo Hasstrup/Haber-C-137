@@ -10,9 +10,9 @@ var LoadDB = require('./load.js')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}));
 
+var MongoURI = process.env.Mongo_URI
 
-
-mongoose.connect("mongodb://localhost/haber", {
+mongoose.connect(MongoURI, {
     useMongoClient: true
 });
 
@@ -29,12 +29,15 @@ app.use(classRoute);
 app.use(StudentRoutes);
 app.use(teacherRoutes);
 
-
 app.use(require('express-session')({
   secret: "headasss",
   resave: false,
   saveUninitialized: false
 }))
+
+app.use(express.static(__dirname + "/public"));
+
+
 
 
 
