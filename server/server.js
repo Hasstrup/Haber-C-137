@@ -42,7 +42,7 @@ app.use(express.static(__dirname + "/public"));
 
 
 
-app.listen(port, function() {
+app.listen(process.env.PORT || 4000, function() {
 
   console.log('haber is up and running at %s', port)
 });
