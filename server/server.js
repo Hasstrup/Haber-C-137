@@ -2,7 +2,7 @@ var express = require('express')
 app = express();
 var request = require("request");
 var mongoose = require('mongoose')
-var port = 4000
+var port = process.env.PORT || 4000
 var cors = require('cors')
 app.use(cors());
 var bodyParser = require('body-parser')
